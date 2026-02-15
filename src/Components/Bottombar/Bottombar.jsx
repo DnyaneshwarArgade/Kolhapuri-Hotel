@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
-import "./Bottombar.css";
+import { useNavigate } from "react-router-dom";
 
 function Bottombar() {
+  const navigate = useNavigate();
+
   return (
     <div className="bottom-bar">
-      <Link to="/">Home</Link>
-      <Link to="/menu">Menu</Link>
-      <Link to="/order">Order</Link>
+      <button onClick={() => navigate("/")}>Home</button>
+      <button onClick={() => navigate("/menu")}>Menu</button>
+      <button onClick={() => navigate("/order")}>Order</button>
+      <button onClick={() => navigate("/profile")}>Profile</button>
     </div>
   );
 }
