@@ -13,7 +13,7 @@ const menuData = [
     id: 1,
     title: "Grilled Steak",
     desc: "Served with vegetables & fries.",
-    price: 24.99,
+    price: 2084,
     category: "Breakfast",
     image: grilledsteak,
   },
@@ -21,7 +21,7 @@ const menuData = [
     id: 2,
     title: "Caesar Salad",
     desc: "Classic Caesar with chicken.",
-    price: 14.99,
+    price: 1250,
     category: "Breakfast",
     image: CaesarSalad,
   },
@@ -29,7 +29,7 @@ const menuData = [
     id: 3,
     title: "Margherita Pizza",
     desc: "Tomato, mozzarella & basil.",
-    price: 18.99,
+    price: 1580,
     category: "Lunch",
     image: pizza,
   },
@@ -37,7 +37,7 @@ const menuData = [
     id: 4,
     title: "Seafood Pasta",
     desc: "Pasta with shrimp & mussels.",
-    price: 22.99,
+    price: 1900,
     category: "Dinner",
     image: pasta,
   },
@@ -45,7 +45,7 @@ const menuData = [
     id: 5,
     title: "Grilled ribeye steak",
     desc: "Tomato sauce, fresh mozzarella Doble Cheese",
-    price: 22.99,
+    price: 1550,
     category: "Lunch",
     image: DobleCheesePizza,
   },
@@ -53,7 +53,7 @@ const menuData = [
     id: 6,
     title: "Grilled ribeye steak",
     desc: "Served with vegetables & fries.",
-    price: 22.99,
+    price: 1240,
     category: "Dinner",
     image: grilledribeyesteak,
   },
@@ -71,9 +71,9 @@ const MenuPage = () => {
   return (
     <div className="menu-page">
       <div className="hotel">
-        <button className="back-btn" onClick={() => navigate("/")}>
+        {/* <button className="back-btn" onClick={() => navigate("/")}>
           ← Back
-        </button>
+        </button> */}
         <div className="hotel-menu">
           <h1>Hotel Menu</h1>
           <p>Explore our delicious offerings</p>
@@ -102,7 +102,7 @@ const MenuPage = () => {
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
               <div className="card-footer">
-                <span>${item.price}</span>
+                <span>₹{item.price}</span>
                 <button>Add to Cart</button>
               </div>
             </div>
