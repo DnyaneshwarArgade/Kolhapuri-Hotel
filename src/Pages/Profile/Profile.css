@@ -1,0 +1,214 @@
+/* Page background */
+.page {
+  min-height: 100vh;
+  background: #f4f6f9;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* Container */
+.profile-container {
+
+  max-width: 440px;
+  margin: 0 auto;
+
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Title */
+.page-title {
+
+  font-size: 26px;
+  font-weight: 600;
+
+  color: #111827;
+
+  margin-bottom: 18px;
+}
+
+/* Card */
+.card {
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 1px 3px rgba(0,0,0,0.06),
+    0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* Profile top */
+.profile-top {
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+/* Avatar */
+.avatar-wrapper {
+  position: relative;
+}
+
+.avatar {
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  background: #e8f0fe;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #1976d2;
+}
+
+/* Verified */
+.verified {
+
+  position: absolute;
+
+  bottom: -2px;
+  right: -2px;
+
+  color: #22c55e;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+/* Name row */
+.name-row {
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* Name */
+.name {
+
+  font-size: 18px;
+  font-weight: 600;
+
+  margin: 0;
+}
+
+/* Badge */
+.active-badge {
+
+  font-size: 13px;
+
+  padding: 4px 12px;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  border-radius: 999px;
+}
+
+/* Role */
+.role {
+
+  font-size: 15px;
+
+  color: #6b7280;
+
+  margin-top: 3px;
+}
+
+/* Info */
+.profile-info {
+
+  margin-top: 16px;
+}
+
+.info-row {
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 16px;
+
+  color: #374151;
+
+  margin-bottom: 12px;
+}
+
+/* Menu */
+.menu-row {
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  font-size: 16px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  cursor: pointer;
+}
+
+.menu-row:last-child {
+  border-bottom: none;
+}
+
+.menu-row:hover {
+  background: #f9fafb;
+}
+
+.logout {
+  color: #dc2626;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+  .profile-container {
+    max-width: 500px;
+  }
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+  .profile-container {
+    max-width: 540px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .name {
+    font-size: 19px;
+  }
+
+  .info-row {
+    font-size: 17px;
+  }
+
+  .menu-row {
+    font-size: 17px;
+  }
+
+}
