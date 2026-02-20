@@ -84,6 +84,10 @@
   border-color: #c65a1e;
 }
 
+.filters .menu-name{
+  font-weight: bold;
+}
+
 .section-title {
   padding: 0 30px;
   margin-bottom: 0px;
@@ -97,7 +101,7 @@
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
   margin-bottom: 60px;
@@ -128,20 +132,28 @@
 
 .card-content h3 {
   margin: 0px 0px 5px 0px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .card-content p {
-  font-size: 17px;
+  font-size: 14px;
   color: #666;
   margin-top: 0px;
 }
 
-.card-footer span {
+/* .card-footer span {
   font-weight: bold;
   font-size: 20px;
   color: black;
   margin-bottom: 0px;
+} */
+ .card-footer span {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;   
+  line-height: 1;        
+  font-family: "Poppins", "Roboto", Arial, sans-serif;
 }
 
 .card-footer {
