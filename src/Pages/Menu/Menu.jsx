@@ -125,9 +125,6 @@ const MenuPage = () => {
   return (
     <div className="menu-page">
       <div className="hotel">
-        {/* <button className="back-btn" onClick={() => navigate("/")}>
-          ← Back
-        </button> */}
         <div className="hotel-menu">
           <h1>Hotel Menu</h1>
           <p>Explore our delicious offerings</p>
@@ -156,7 +153,7 @@ const MenuPage = () => {
               <p>{item.desc}</p>
               <div className="card-footer">
                 <span>₹{item.price}</span>
-                <button>Add to Cart</button>
+                {/* <button>Add to Cart</button> */}
               </div>
             </div>
           </div>
