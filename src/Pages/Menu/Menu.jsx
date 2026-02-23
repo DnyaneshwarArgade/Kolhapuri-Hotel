@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+  
+
 import "./Menu.css";
 import starter from "../../assets/Starter.webp";
 import paneermasala from "../../assets/veg paneer masala.jpg";
@@ -113,14 +117,46 @@ const menuData = [
   { id: 54, title: "Anda Curry Thali", desc: "", price: 170, category: "Anda", image: andacurrythali, },
 
 ];
-
-const MenuPage = () => {
+   const MenuPage = ({ cart, setCart }) => {
 
   const [active, setActive] = useState("All");
   const filteredItems =
     active === "All"
       ? menuData
       : menuData.filter((item) => item.category === active);
+
+ const navigate = useNavigate();
+
+   const addToCart = (item) => {
+
+  const existing = cart.find((i) => i.id === item.id);
+
+  if (existing) {
+    // same item click → qty 
+    setCart(
+      cart.map((i) =>
+        i.id === item.id
+          ? { ...i, qty: i.qty + 1 }
+          : i
+      )
+    );
+  } else {
+    // new item add करा
+    setCart([
+      ...cart,
+      {
+        id: item.id,
+        name: item.title,
+        price: Number(item.price) || 0,
+        qty: 1,
+      },
+    ]);
+  }
+
+  navigate("/order"); 
+};
+
+
 
   return (
     <div className="menu-page">
@@ -146,7 +182,8 @@ const MenuPage = () => {
 
       <div className="card-grid">
         {filteredItems.map((item) => (
-          <div className="menu-card" key={item.id}>
+          // <div className="menu-card" key={item.id}>
+          <div className="menu-card" key={item.id} onClick={() => addToCart(item)}style={{ cursor: "pointer" }}>
             <img src={item.image} alt={item.title} />
             <div className="card-content">
               <h3>{item.title}</h3>
