@@ -1,0 +1,35 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-container {
+  height: calc(100vh - 60px); 
+  width: 100%;
+  background-color: #d2c0a8; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit:fill;
+}
