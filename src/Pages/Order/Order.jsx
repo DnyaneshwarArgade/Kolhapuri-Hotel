@@ -68,20 +68,17 @@ const Order = ({ cart, setCart, billNo, setBillNo }) => {
         <div className="order-card">
 
           {/* Header */}
-            <div className="header-top">
-  <div className="header-left">
+          
+       <div className="header-top">
+  
+       <img src={logo} alt="Hotel Logo" className="hotel-logo" />
+
+     <div className="header-left">
     <h2 className="hotel-name">हॉटेल कोल्हापुरी</h2>
     <p className="bill-info">Bill No: {billNo}</p>
-       <div className="mobile-row">
-    <span>Mobile:</span>
-    <input type="text" value={mobile}onChange={(e) => setMobile(e.target.value)}
-    placeholder="Enter mobile number"/>
-   </div>
      </div>
-      <img src={logo} alt="Hotel Logo" className="hotel-logo" />
-     </div>
-
-          {/* Table Header */}
+    </div>
+       {/* Table Header */}
           <div className="table-header">
             <span>Name</span>
             <span>Quantity</span>
