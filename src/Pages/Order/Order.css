@@ -156,18 +156,13 @@
     padding: 0;
   }
 
-  /* Hide everything */
   body * {
     visibility: hidden;
   }
-
-  /* Show only bill */
   .bill-print,
   .bill-print * {
     visibility: visible;
   }
-
-  /* Proper positioning */
   .bill-print {
     position: absolute;
     left: 0;
@@ -181,9 +176,15 @@
     display: none;
   }
 
-}
+  }
+
+         .qty-input {
+  width: 50px;
+  text-align: center;
+  padding: 3px;
+   }
   /*  MOBILE = */
-@media (max-width: 480px) {
+  @media (max-width: 480px) {
 
   .hotel-name {
     font-size: 22px;

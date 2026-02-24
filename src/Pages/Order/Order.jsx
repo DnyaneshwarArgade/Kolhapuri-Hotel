@@ -34,16 +34,33 @@ const Order = ({ cart, setCart, billNo, setBillNo }) => {
   localStorage.setItem("billNo", newBill);
   setBillNo(newBill);
    };
-    const handleCancel = () => {
-  setCart([]);
-  generateNextBill();
-   };
+
+     const handleCancel = () => {
+     setCart([]);   
+      };
 
   const handlePrint = () => {
   window.print();
   setCart([]);
   generateNextBill();
+   };
+        
+     const updateQty = (id, value) => {
+
+  if (value <= 1) {
+    setCart(cart.filter(item => item.id !== id));
+    return;
+  }
+
+  const updatedCart = cart.map(item =>
+    item.id === id
+      ? { ...item, qty: value }
+      : item
+  );
+
+  setCart(updatedCart);
 };
+     
 
   return (
     <div className="bill-print">
@@ -67,7 +84,7 @@ const Order = ({ cart, setCart, billNo, setBillNo }) => {
           {/* Table Header */}
           <div className="table-header">
             <span>Name</span>
-            <span>Qty</span>
+            <span>Quantity</span>
             <span>Price</span>
             <span></span>
           </div>
@@ -77,18 +94,21 @@ const Order = ({ cart, setCart, billNo, setBillNo }) => {
             <p style={{ textAlign: "center" }}>No items added</p>
           ) : (
             cart.map((item) => (
-              <div className="item-row" key={item.id}>
-                <span>{item.name}</span>
-                <span>{item.qty}</span>
-                <span>₹{item.price.toFixed(2)}</span>
+                         <div className="item-row" key={item.id}>
+  <span>{item.name}</span>
 
-                <button
-                  className="delete-btn"
-                  onClick={() => removeItem(item.id)}
-                >
-                  ✖
-                </button>
-              </div>
+  <input type="number" min="0"value={item.qty}onChange={(e) =>
+      updateQty(item.id, Number(e.target.value))
+    }
+    className="qty-input"/>
+
+   <span>₹{(item.qty * item.price).toFixed(2)}</span>
+   <button
+    className="delete-btn"
+    onClick={() => removeItem(item.id)}>
+    ✖
+    </button>
+     </div>
             ))
           )}
 
