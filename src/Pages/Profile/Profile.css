@@ -171,14 +171,6 @@
   border-bottom: none;
 }
 
-.menu-row:hover {
-  background: #f9fafb;
-}
-
-.logout {
-  color: #dc2626;
-}
-
 /* Tablet */
 @media (min-width: 768px) {
 

@@ -7,7 +7,6 @@ import {
   Settings,
   Bell,
   HelpCircle,
-  LogOut,
   CheckCircle
 } from "lucide-react";
 
@@ -42,7 +41,7 @@ const Profile = () => {
               <div className="name-row">
 
                 <h3 className="name">
-                 Dnyaneshwar Argade
+                  Dnyaneshwar Argade
                 </h3>
 
                 <span className="active-badge">
@@ -94,11 +93,6 @@ const Profile = () => {
             <span>Help & Support</span>
           </div>
 
-          <div className="menu-row logout">
-            <LogOut size={20} />
-            <span>Logout</span>
-          </div>
-
         </div>
 
       </div>
@@ -108,5 +102,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-
